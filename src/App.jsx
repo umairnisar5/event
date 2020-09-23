@@ -1,25 +1,23 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+
 
 const App = () => {
-    const purple = "#8e44ad";
-    const [bg, setBg] = useState(purple);
 
+    const purple = "#8e44ad"
+ const [bg, setBg] = useState(purple);
+    const bgChange = () => {
+        let newBg = "#34495e"
+        setBg(newBg);
+    };
 
-const bigChange = () => {
-  let newBg = "#34495r";  
-  setBg(newBg); 
+return(
+    <>
+        <div style = {{ backgroundColor: bg }}>
+            <button onClick = {bgChange} >Click Me</button>
+        </div>
+    </>
+);
+
 };
 
-    return (
-
-        <>
-<div style = { { backGround : bg }}>
-    <button onClick= {bigChange} > Click Me </button>
-</div>
-
-        </>
-    );
-} ;
-
-export default App ;
-
+export default App;
